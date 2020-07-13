@@ -21,12 +21,14 @@ body {
   margin: 0 auto;
   height: 100vh;
   padding: 20px 0;
+
 }
 #contatti {
   width:350px;
   float: left;
   height: 100%;
   background-color: white;
+  overflow: hidden;
 }
 #conversazione {
   width: calc( 100% - 350px);
@@ -52,6 +54,8 @@ header {
 }
 .info_contatto_chat {
   display: flex;
+  align-items: center;
+  height: 100%;
 }
 .info_contatto_chat .nome_accesso {
   display: flex;
@@ -80,6 +84,7 @@ header .icone i {
   align-items: center;
 }
 #contatti .notifiche i {
+  color: #9fe4ed;
   background-color: white;
   border-radius: 50%;
   padding: 12px;
@@ -91,6 +96,33 @@ header .icone i {
 #contatti .notifiche > div a {
   color: grey;
   font-size: 13px;
+}
+#contatti #cerca_contatto {
+  height: 45px;
+}
+#contatti #cerca_contatto i {
+  width: 15%;
+  text-align: center;
+  color: #ccc;
+}
+#contatti #cerca_contatto input{
+  height: 100%;
+  width: 80%;
+  border: none;
+}
+#contatti #lista_contatti li {
+  height: 70px;
+  position: relative;
+}
+#contatti #lista_contatti li span{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 10px;
+  color: grey;
+}
+#contatti .selezionato {
+  background-color: #e4ebf7;
 }
 /* chat */
 #conversazione .chat {
@@ -110,7 +142,7 @@ header .icone i {
 #conversazione .chat .messaggio .ora {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 5px;
   font-size: 12px;
   color: #ccc;
 }
