@@ -6,7 +6,7 @@
 /* background */
 /* per dopo rgb(236, 229, 221) chat */
 body {
-  background-color: rgb(236, 229, 221);
+  background-color: #f0f0f0;
 }
 .barra_blue {
   position: fixed;
@@ -23,23 +23,25 @@ body {
   padding: 20px 0;
 }
 #contatti {
-  width:300px;
+  width:350px;
   float: left;
   height: 100%;
   background-color: white;
 }
 #conversazione {
-  width: calc( 100% - 300px);
+  width: calc( 100% - 350px);
   float: left;
   height: 100%;
-  background-color: #e3d9ca;
+  background-color: #ECE5DD;
+  position: relative;
+  overflow: hidden;
 }
 #contatti header {
   border-right: solid 1px #ccc;
 }
 header {
   height: 60px;
-  background-color: #ededed;
+  background-color: #f0f0f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,5 +54,93 @@ header {
   display: flex;
 }
 .info_contatto_chat .nome_accesso {
-  /* display: flex; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 7px;
+}
+.info_contatto_chat .nome_accesso p {
+  font-size: 13px;
+  color: grey;
+}
+header .icone {
+  padding-right: 10px;
+}
+header .icone i {
+  color: #adadad;
+  font-size: 18px;
+  padding: 5px;
+}
+/* contatti */
+#contatti .notifiche {
+  background-color: #9fe4ed;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  align-items: center;
+}
+#contatti .notifiche i {
+  background-color: white;
+  border-radius: 50%;
+  padding: 12px;
+}
+#contatti .notifiche > div {
+  padding-right: 10px;
+  font-size: 15px;
+}
+#contatti .notifiche > div a {
+  color: grey;
+  font-size: 13px;
+}
+/* chat */
+#conversazione .chat {
+  width: 80%;
+  margin: 40px auto;
+  clear: both;
+}
+#conversazione .chat .messaggio {
+  padding: 17px 12px;
+  background-color: white;
+  border-radius: 8px;
+  width: 150px;
+  position: relative;
+  clear: both;
+  margin-top: 10px;
+}
+#conversazione .chat .messaggio .ora {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
+  color: #ccc;
+}
+#conversazione .chat .ricevuto {
+  float: left;
+  background-color: white;
+}
+#conversazione .chat .inviato {
+  float: right;
+  background-color:#DCF8C6;
+}
+#conversazione footer {
+  height: 50px;
+  background-color: #f5f0f0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#conversazione footer #messaggio {
+  width: 85%;
+  height: 90%;
+  border-radius: 5px;
+  border: none;
+}
+#conversazione footer i {
+  color: grey;
+  font-size: 20px;
+  padding: 20px;
 }
