@@ -3,6 +3,12 @@
 //   console.log(messaggio);
 // }
 
+function risposta() {
+  setTimeout(function (where) {
+    where.append("<div class=\"messaggio ricevuto\">"+ ok +"<span class= \"ora\">now</span></div>");
+  }, 1000);
+}
+
 
 function init() {
   var target = $(".chat");
@@ -13,6 +19,10 @@ function init() {
     var  messaggio = $("#messaggio").val();
     target.append("<div class=\"messaggio inviato\">"+ messaggio +"<span class= \"ora\">now</span></div>");
     $("#messaggio").val("");
+    // risposta(target);
+    setTimeout(function (where) {
+      target.append("<div class=\"messaggio ricevuto\">ok<span class= \"ora\">now</span></div>");
+    }, 1000);
     }
     console.log(messaggio);
 
