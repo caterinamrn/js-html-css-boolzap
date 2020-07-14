@@ -31,7 +31,7 @@ function init() {
 
     setTimeout( function () {
       target.append("<div class=\"messaggio ricevuto\"> ok <span class= \"ora\">now</span></div>");
-    } , 3000);
+    } , 1000);
     }
 
   })
