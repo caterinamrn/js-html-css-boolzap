@@ -3,11 +3,24 @@
 //   console.log(messaggio);
 // }
 
+// function elimina opzioni_messaggio
+function cancelMsg() {
+  $(document).on("click",".opzioni_messaggio", function(){
+    console.log("click");
+    $(this).next("ul").toggle();
+  });
+  $(document).on("click",".delete",function () {
+    $(this).parents(".messaggio").hide();
+    console.log("cancella");
+  })
+}
+
 function init() {
   var target = $(".chat");
   // console.log(target);
-
+  cancelMsg();
   // search conatti
+  //provo un if con each .find
   $("#contatto_search").on("keyup",function () {
     console.log("prova");
     var value = $(this).val().toLowerCase();
@@ -26,11 +39,11 @@ function init() {
     // console.log(event.which);
     if (event.which == 13) {
     var  messaggio = $("#messaggio").val();
-    target.append("<div class=\"messaggio inviato\">"+ messaggio +"<span class= \"ora\">now</span></div>");
+    target.append("<div class=\"messaggio inviato\">"+ messaggio +"<span class= \"ora\">now</span><i class=\"fas fa-chevron-down opzioni_messaggio\"></i><ul class=\"opzioni_messaggio_dropdown\"><li>Message info</li><li class=\"delete\">Delete message</li></ul></div> " );
     $("#messaggio").val("");
-
+// nella setTimeout non posso mettere un argomento alla funzone chiamata,posso usare funzione anonima e richiamarla
     setTimeout( function () {
-      target.append("<div class=\"messaggio ricevuto\"> ok <span class= \"ora\">now</span></div>");
+      target.append("<div class=\"messaggio ricevuto\"> ok <span class= \"ora\">now</span><i class=\"fas fa-chevron-down opzioni_messaggio\"></i><ul class=\"opzioni_messaggio_dropdown\"><li>Message info</li><li class=\"delete\">Delete message</li></ul></div>");
     } , 1000);
     }
 
