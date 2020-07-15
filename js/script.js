@@ -24,6 +24,7 @@ function selContattoeChat() {
         console.log(this);
         precedente_nome.removeClass("active");
         precedente_img.removeClass("active");
+        precedente_chat.removeClass("active")
         
         $(this).addClass("active");
       }

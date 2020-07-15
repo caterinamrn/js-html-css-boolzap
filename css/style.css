@@ -134,6 +134,7 @@ header .icone i {
   width: 80%;
   margin: 40px auto;
   clear: both;
+  display: none;
 }
 #conversazione .chat .messaggio {
   padding: 17px 12px;
