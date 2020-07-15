@@ -205,8 +205,18 @@ header .icone i {
   padding: 20px;
 }
 /* hover */
+
+#contatti #lista_contatti li:hover {
+  cursor: pointer;
+}
 #conversazione .chat .messaggio:hover .opzioni_messaggio{
   display:inline-block;
+}
+#conversazione .opzioni_messaggio:hover {
+  cursor: pointer;
+}
+#conversazione .opzioni_messaggio_dropdown li:hover {
+  cursor: pointer;
 }
 /* classe per mostare schermata del conatto selezionato */
 #conversazione .active {
