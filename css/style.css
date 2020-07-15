@@ -124,6 +124,12 @@ header .icone i {
   background-color: #e4ebf7;
 }
 /* chat */
+#conversazione h4{
+  display: none;
+}
+#conversazione img{
+  display: none;
+}
 #conversazione .chat {
   width: 80%;
   margin: 40px auto;
@@ -200,4 +206,8 @@ header .icone i {
 /* hover */
 #conversazione .chat .messaggio:hover .opzioni_messaggio{
   display:inline-block;
+}
+/* classe per mostare schermata del conatto selezionato */
+#conversazione .active {
+  display: block;
 }

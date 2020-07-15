@@ -4,22 +4,30 @@
 // }
 
 // seleziona contatto
-function selContatto() {
+function selContattoeChat() {
   $("#lista_contatti li").click(function () {
     var precedente = $("li.selezionato");
+    var precedente_nome = $("#conversazione h4.active");
+    var precedente_img = $("#conversazione img.active");
+    var precedente_chat = $("#conversazione .chat.active");
     // console.log(precedente);
+    console.log(precedente_nome,precedente_img,precedente_chat);
     precedente.removeClass("selezionato");
     $(this).addClass("selezionato");
      var selezionato = $(this).data("id");
     console.log(selezionato);
     var elementi_conversazione = $("#conversazione").find("*");
-    console.log(elementi_conversazione);
+    // console.log(elementi_conversazione);
 
-  
     elementi_conversazione.each(function () {
       if ($(this).data("id")== selezionato){
-        console.log("yee");
+        console.log(this);
+        precedente_nome.removeClass("active");
+        precedente_img.removeClass("active");
+        
+        $(this).addClass("active");
       }
+
     });
   });
 }
@@ -40,7 +48,7 @@ function init() {
   var target = $(".chat");
   // console.log(target);
   cancelMsg();
-  selContatto();
+  selContattoeChat();
   // search conatti
   //provo un if con each .find
   $("#contatto_search").on("keyup",function () {
