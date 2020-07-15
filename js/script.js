@@ -3,6 +3,27 @@
 //   console.log(messaggio);
 // }
 
+// seleziona contatto
+function selContatto() {
+  $("#lista_contatti li").click(function () {
+    var precedente = $("li.selezionato");
+    // console.log(precedente);
+    precedente.removeClass("selezionato");
+    $(this).addClass("selezionato");
+     var selezionato = $(this).data("id");
+    console.log(selezionato);
+    var elementi_conversazione = $("#conversazione").find("*");
+    console.log(elementi_conversazione);
+
+  
+    elementi_conversazione.each(function () {
+      if ($(this).data("id")== selezionato){
+        console.log("yee");
+      }
+    });
+  });
+}
+
 // function elimina opzioni_messaggio
 function cancelMsg() {
   $(document).on("click",".opzioni_messaggio", function(){
@@ -19,6 +40,7 @@ function init() {
   var target = $(".chat");
   // console.log(target);
   cancelMsg();
+  selContatto();
   // search conatti
   //provo un if con each .find
   $("#contatto_search").on("keyup",function () {

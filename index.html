@@ -23,7 +23,7 @@
         </header>
         <div class="notifiche">
           <i class="fas fa-bell-slash"></i>
-          <div class="">
+          <div >
             <h4>Ricevi notifiche di nuovi messaggi</h4>
             <span><a href="#">Attiva notifiche desktop</a></span>
           </div>
@@ -34,17 +34,17 @@
         </div>
 
         <ul id="lista_contatti">
-          <li class=" selezionato">
+          <li class="selezionato" data-id="0">
             <div class="info_contatto_chat">
-              <img class="avatar" src="img/profilo1.webp" alt="avatar profilo">
+              <img  class="avatar" src="img/profilo1.webp" alt="avatar profilo">
               <div class="nome_accesso">
-                <h4>Paolo</h4>
+                <h4 >Paolo</h4>
                 <p>Non poteva essere altrimenti</p>
               </div>
             </div>
             <span>17:53</span>
           </li>
-          <li>
+          <li data-id="1">
             <div class="info_contatto_chat">
               <img class="avatar" src="img/profilo2.png" alt="avatar profilo">
               <div class="nome_accesso">
@@ -54,7 +54,7 @@
             </div>
             <span>17:53</span>
           </li>
-          <li>
+          <li data-id="2">
             <div class="info_contatto_chat">
               <img class="avatar" src="img/profilo3.png" alt="avatar profilo">
               <div class="nome_accesso">
@@ -64,7 +64,7 @@
             </div>
             <span>17:53</span>
           </li>
-          <li>
+          <li data-id="3">
             <div class="info_contatto_chat">
               <img class="avatar" src="img/profilo4.png" alt="avatar profilo">
               <div class="nome_accesso">
@@ -78,10 +78,10 @@
       </div>
       <div id="conversazione">
         <header>
-          <div class="info_contatto_chat">
-            <img class="avatar" src="img/profilo1.webp" alt="avatar profilo">
+          <div class="info_contatto_chat" data-id="0">
+            <img  class="avatar" src="img/profilo1.webp" alt="avatar profilo">
             <div class="nome_accesso">
-              <h4>Paolo</h4>
+              <h4 >Paolo</h4>
               <p>ultimo accesso alle 15.40</p>
             </div>
           </div>
@@ -92,7 +92,7 @@
           </div>
         </header>
         <main>
-          <div class="chat">
+          <div class="chat "data-id="0">
             <div class="messaggio inviato">
               Ciao come stai?
               <span class="ora">8.46</span>
