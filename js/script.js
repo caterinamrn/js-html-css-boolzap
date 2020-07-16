@@ -1,3 +1,7 @@
+// prova ad usare il .clone
+//usa funzione per trovare l'ora e scriverla nel messaggio
+
+
 // function messaggio() {
 //   var messaggio = $("#messaggio").value();
 //   console.log(messaggio);
@@ -25,7 +29,7 @@ function selContattoeChat() {
         precedente_nome.removeClass("active");
         precedente_img.removeClass("active");
         precedente_chat.removeClass("active")
-        
+
         $(this).addClass("active");
       }
 
@@ -46,7 +50,7 @@ function cancelMsg() {
 }
 
 function init() {
-  var target = $(".chat");
+
   // console.log(target);
   cancelMsg();
   selContattoeChat();
@@ -66,7 +70,7 @@ function init() {
 
   // scrivi un messaggio e ti arriva una risposta
   $("#messaggio").keypress(function () {
-
+    var target = $(".chat.active");
     // console.log(event.which);
     if (event.which == 13) {
     var  messaggio = $("#messaggio").val();
@@ -74,6 +78,7 @@ function init() {
     $("#messaggio").val("");
 // nella setTimeout non posso mettere un argomento alla funzone chiamata,posso usare funzione anonima e richiamarla
     setTimeout( function () {
+      var target = $(".chat.active");
       target.append("<div class=\"messaggio ricevuto\"> ok <span class= \"ora\">now</span><i class=\"fas fa-chevron-down opzioni_messaggio\"></i><ul class=\"opzioni_messaggio_dropdown\"><li>Message info</li><li class=\"delete\">Delete message</li></ul></div>");
     } , 1000);
     }
