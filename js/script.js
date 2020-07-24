@@ -7,6 +7,12 @@
 //   console.log(messaggio);
 // }
 
+// funzione risposta
+function replay(target) {
+
+  target.append("<div class=\"messaggio ricevuto\"> ok <span class= \"ora\">now</span><i class=\"fas fa-chevron-down opzioni_messaggio\"></i><ul class=\"opzioni_messaggio_dropdown\"><li>Message info</li><li class=\"delete\">Delete message</li></ul></div>");
+}
+
 // seleziona contatto
 function selContattoeChat() {
   $("#lista_contatti li").click(function () {
@@ -73,10 +79,7 @@ function sendMsgAndAnswer() {
     target.append("<div class=\"messaggio inviato\">"+ messaggio +"<span class= \"ora\">now</span><i class=\"fas fa-chevron-down opzioni_messaggio\"></i><ul class=\"opzioni_messaggio_dropdown\"><li>Message info</li><li class=\"delete\">Delete message</li></ul></div> " );
     $("#messaggio").val("");
   // nella setTimeout non posso mettere un argomento alla funzone chiamata,posso usare funzione anonima e richiamarla
-    setTimeout( function () {
-      var target = $(".chat.active");
-      target.append("<div class=\"messaggio ricevuto\"> ok <span class= \"ora\">now</span><i class=\"fas fa-chevron-down opzioni_messaggio\"></i><ul class=\"opzioni_messaggio_dropdown\"><li>Message info</li><li class=\"delete\">Delete message</li></ul></div>");
-    } , 1000);
+    setTimeout( function(){ replay(target); }, 1000);
     }
 
   });
