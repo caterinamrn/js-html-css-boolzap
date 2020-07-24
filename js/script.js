@@ -43,12 +43,35 @@ function selContattoeChat() {
   });
 }
 
+
+function closeInfo() {
+  $(document).on("click",".opzioni_messaggio", function(){
+
+      var selected = $(this).next("ul");
+      var selOpen = selected.hasClass("active");
+      if (selOpen) {
+        selected.removeClass("active")
+        console.log("ok");
+      }
+  });
+}
 // function elimina opzioni_messaggio
 function cancelMsg() {
   $(document).on("click",".opzioni_messaggio", function(){
-    console.log("click");
-    $(this).next("ul").toggle();
+    // console.log("click");
+    // $(".opzioni_messaggio").next("ul").hide();
+    $(".opzioni_messaggio").not(this).next("ul").removeClass("active");
+      var selected = $(this).next("ul");
+      var isOpen = selected.hasClass("active")
+      if (isOpen) {
+        selected.removeClass("active");
+      }
+      else {
+        selected.addClass("active");
+      }
+
   });
+
   $(document).on("click",".delete",function () {
     $(this).parents(".messaggio").hide();
     console.log("cancella");
