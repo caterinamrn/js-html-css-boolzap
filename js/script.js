@@ -60,7 +60,7 @@ function cancelMsg() {
   $(document).on("click",".opzioni_messaggio", function(){
     // console.log("click");
     // $(".opzioni_messaggio").next("ul").hide();
-    $(".opzioni_messaggio").not(this).next("ul").removeClass("active");
+    // $(".opzioni_messaggio").not(this).next("ul").removeClass("active");
       var selected = $(this).next("ul");
       var isOpen = selected.hasClass("active")
       if (isOpen) {
@@ -68,6 +68,7 @@ function cancelMsg() {
       }
       else {
         selected.addClass("active");
+        $(".opzioni_messaggio").not(this).next("ul").removeClass("active");
       }
 
   });
